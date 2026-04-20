@@ -1,25 +1,41 @@
 #include <iostream>
 using namespace std;
 
-class Mahasiswa{
-public :
-     int nim;
-     string nama;
-     float nilai;
+class Barang{
+public:
+    string nama;
+    int jumlah;
+    string kategori;
+    string tanggalProduksi;
 
-     void printData(){
-        cout << "NIM : " << nim << endl;
-        cout << "Nama : " << nama << endl;
-        cout << "Nilai : " << nilai << endl;
-     }
-};  //batas class
+    void printData(){
+        cout << "Nama Barang       : " << nama << endl;
+        cout << "Jumlah            : " << jumlah << endl;
+        cout << "Kategori          : " << kategori << endl;
+        cout << "Tanggal Produksi  : " << tanggalProduksi << endl;
+    }
+};  // batas class
 
 int main(){
-    Mahasiswa mhs;//object 
-    mhs.nim = 2022;
-    mhs.nama = "Abra";
-    mhs.nilai = 90.5;
+    Barang elektronik;      // object 1
+    Barang nonElektronik;   // object 2
 
-    mhs.printData();
+    // data barang elektronik
+    elektronik.nama = "Laptop";
+    elektronik.jumlah = 10;
+    elektronik.kategori = "Elektronik";
+    elektronik.tanggalProduksi = "2025-01-10";
+
+    // data barang non-elektronik
+    nonElektronik.nama = "Meja";
+    nonElektronik.jumlah = 5;
+    nonElektronik.kategori = "Non Elektronik";
+    nonElektronik.tanggalProduksi = "2024-12-01";
+
+    // menampilkan data
+    cout << "Data Barang Elektronik:" << endl;
+    elektronik.printData();
+
+    cout << "\nData Barang Non Elektronik:" << endl;
+    nonElektronik.printData();
 }
-
